@@ -1,0 +1,6 @@
+---
+- name: clone a repo
+  git: repo=https://github.com/gitinsky/baseimage-docker.git dest=/root/baseimage-docker accept_hostkey=yes
+
+- name: build an image
+  command: bash -c "cd /root/baseimage-docker && make build NAME=gitinsky/baseimage"
